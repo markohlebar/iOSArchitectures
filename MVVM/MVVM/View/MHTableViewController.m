@@ -44,8 +44,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     id <MHViewModel> viewModel = self.viewModels[indexPath.row];
     
-    ///I am conveniently using the identifier here as a cell identifier. Someone else might chose
-    ///to use the identifier only as way to identify different viewmodel instances. 
+    ///I am conveniently using the identifier here as a cell identifier. Someone else might choose
+    ///to use the identifier only as way to identify different viewmodel instances,
+    ///and present table view cells accordingly.
     NSString *identifier = viewModel.identifier;
     UITableViewCell <MHView> *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
