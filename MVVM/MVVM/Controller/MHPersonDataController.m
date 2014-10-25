@@ -13,11 +13,11 @@
 #import "MHPerson.h"
 #import "UIColor+Hex.h"
 
-@interface MHPersonNameViewModel : NSObject <MHNameViewModel>
+@interface MHPersonViewModel : NSObject <MHViewModel>
 @property (nonatomic, strong, readonly) MHPerson *person;
 @end
 
-@implementation MHPersonNameViewModel
+@implementation MHPersonViewModel
 
 + (instancetype)viewModelWithModel:(MHPerson *)person {
     return [[self alloc] initWithModel:person];
@@ -30,6 +30,18 @@
     }
     return self;
 }
+
+- (NSString *)identifier {
+    NSAssert(NO, @"Implement in concrete subclass");
+    return nil;
+}
+
+@end
+
+@interface MHPersonNameViewModel : MHPersonViewModel <MHNameViewModel>
+@end
+
+@implementation MHPersonNameViewModel
 
 - (NSString *)name {
     return self.person.fullName;
@@ -46,23 +58,10 @@
 
 @end
 
-@interface MHPersonColorViewModel : NSObject <MHColorViewModel>
-@property (nonatomic, strong, readonly) MHPerson *person;
+@interface MHPersonColorViewModel : MHPersonViewModel <MHColorViewModel>
 @end
 
 @implementation MHPersonColorViewModel
-
-+ (instancetype)viewModelWithModel:(MHPerson *)person {
-    return [[self alloc] initWithModel:person];
-}
-
-- (instancetype)initWithModel:(MHPerson *)person {
-    self = [super init];
-    if (self) {
-        _person = person;
-    }
-    return self;
-}
 
 - (UIColor *)color {
     return [UIColor colorFromHexString:self.person.hexColorCode];
@@ -91,12 +90,12 @@
 
 - (void)reloadData:(MHViewModelBlock)dataBlock {
     [self.dataFetcher fetchPersonae:^(NSArray *personae) {
-        NSArray *viewModels = [self prepareViewModelForPersonae:personae];
+        NSArray *viewModels = [self viewModelsForPersonae:personae];
         dataBlock(viewModels, nil);
     }];
 }
 
-- (NSArray *)prepareViewModelForPersonae:(NSArray *)personae {
+- (NSArray *)viewModelsForPersonae:(NSArray *)personae {
     NSMutableArray *viewModels = [NSMutableArray new];
     for (MHPerson *person in personae) {
         Class viewModelClass = (person.ID.integerValue % 2 == 0) ?
