@@ -1,6 +1,6 @@
 //
-//  iOSArchitecturesTests.m
-//  iOSArchitecturesTests
+//  MVVMTests.m
+//  MVVMTests
 //
 //  Created by Marko Hlebar on 25/10/2014.
 //  Copyright (c) 2014 Marko Hlebar. All rights reserved.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface iOSArchitecturesTests : XCTestCase
+@interface MVVMTests : XCTestCase
 
 @end
 
-@implementation iOSArchitecturesTests
+@implementation MVVMTests
 
 - (void)setUp {
     [super setUp];
