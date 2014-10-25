@@ -1,5 +1,5 @@
 //
-//  MHCell.h
+//  MHView.h
 //  MVVM
 //
 //  Created by Marko Hlebar on 25/10/2014.

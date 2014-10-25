@@ -8,9 +8,8 @@
 
 #import "MHTableViewController.h"
 #import "MHDataController.h"
-#import "MHColorTableCell.h"
 #import "MHViewModel.h"
-#import "MHNameTableCell.h"
+#import "MHView.h"
 
 @interface MHTableViewController ()
 @property (nonatomic, copy) NSArray *viewModels;
@@ -29,12 +28,6 @@
         weakSelf.viewModels = viewModels;
         [weakSelf.tableView reloadData];
     }];
-    
-    [self.tableView registerClass:[MHColorTableCell class]
-           forCellReuseIdentifier:@"MHColorTableCell"];
-    
-    [self.tableView registerClass:[MHNameTableCell class]
-           forCellReuseIdentifier:@"MHNameTableCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,8 +43,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     id <MHViewModel> viewModel = self.viewModels[indexPath.row];
-    UITableViewCell <MHView> *cell = [tableView dequeueReusableCellWithIdentifier:viewModel.identifier
-                                                                     forIndexPath:indexPath];
+    
+    ///I am conveniently using the identifier here as a cell identifier. Someone else might chose
+    ///to use the identifier only as way to identify different viewmodel instances. 
+    NSString *identifier = viewModel.identifier;
+    UITableViewCell <MHView> *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[NSClassFromString(identifier) alloc] initWithStyle:UITableViewCellStyleDefault
+                                                    reuseIdentifier:identifier];
+    }
     [cell updateWithViewModel:viewModel];
     return cell;
 }

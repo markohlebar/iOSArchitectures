@@ -48,7 +48,6 @@
 
 @interface MHPersonColorViewModel : NSObject <MHColorViewModel>
 @property (nonatomic, strong, readonly) MHPerson *person;
-+ (instancetype)viewModelWithModel:(MHPerson *)person;
 @end
 
 @implementation MHPersonColorViewModel

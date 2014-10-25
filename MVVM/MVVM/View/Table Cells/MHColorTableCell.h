@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MHCell.h"
+#import "MHView.h"
 
 @protocol MHColorViewModel;
 @interface MHColorTableCell : UITableViewCell <MHView>

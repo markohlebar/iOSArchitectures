@@ -70,7 +70,7 @@
 		9630C90519FBC8A700579953 /* MHColorTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHColorTableCell.h; path = "View/Table Cells/MHColorTableCell.h"; sourceTree = "<group>"; };
 		9630C90619FBC8A700579953 /* MHColorTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHColorTableCell.m; path = "View/Table Cells/MHColorTableCell.m"; sourceTree = "<group>"; };
 		9630C90819FBC8CD00579953 /* MHColorTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MHColorTableCell.xib; path = "View/Table Cells/MHColorTableCell.xib"; sourceTree = "<group>"; };
-		9630C90A19FBDD2700579953 /* MHCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCell.h; sourceTree = "<group>"; };
+		9630C90A19FBDD2700579953 /* MHView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHView.h; sourceTree = "<group>"; };
 		9630C90B19FBDD5C00579953 /* MHViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHViewModel.h; sourceTree = "<group>"; };
 		9630C90C19FBDE0C00579953 /* MHNameTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHNameTableCell.h; path = "View/Table Cells/MHNameTableCell.h"; sourceTree = "<group>"; };
 		9630C90D19FBDE0C00579953 /* MHNameTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHNameTableCell.m; path = "View/Table Cells/MHNameTableCell.m"; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 				9630C91119FBEA6500579953 /* MHModel.h */,
 				9630C90B19FBDD5C00579953 /* MHViewModel.h */,
 				9630C8D519FBAE0300579953 /* MHDataController.h */,
-				9630C90A19FBDD2700579953 /* MHCell.h */,
+				9630C90A19FBDD2700579953 /* MHView.h */,
 				9630C8D819FBB58900579953 /* ViewModel */,
 				9630C8DD19FBB6CA00579953 /* Model */,
 				9630C8D619FBB55B00579953 /* Controller */,
