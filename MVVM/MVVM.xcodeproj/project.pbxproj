@@ -25,6 +25,9 @@
 		9630C90919FBC8CD00579953 /* MHColorTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9630C90819FBC8CD00579953 /* MHColorTableCell.xib */; };
 		9630C90E19FBDE0C00579953 /* MHNameTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9630C90D19FBDE0C00579953 /* MHNameTableCell.m */; };
 		9630C91019FBDE4200579953 /* MHNameTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9630C90F19FBDE4200579953 /* MHNameTableCell.xib */; };
+		9680C88A19FEA3E800DFE38A /* MHHexColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9680C88919FEA3E800DFE38A /* MHHexColorTransformer.m */; };
+		9680C93519FEBCD500DFE38A /* libBIND.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9680C93419FEBCD500DFE38A /* libBIND.a */; };
+		9680C94519FED80500DFE38A /* MHNameTableCell.bind in Resources */ = {isa = PBXBuildFile; fileRef = 9680C94419FED80500DFE38A /* MHNameTableCell.bind */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		863689D0B9098B91C424CAA9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9630C8AC19FBAD8E00579953 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9630C8B019FBAD8E00579953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9630C8B119FBAD8E00579953 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,12 +74,25 @@
 		9630C90519FBC8A700579953 /* MHColorTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHColorTableCell.h; path = "View/Table Cells/MHColorTableCell.h"; sourceTree = "<group>"; };
 		9630C90619FBC8A700579953 /* MHColorTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHColorTableCell.m; path = "View/Table Cells/MHColorTableCell.m"; sourceTree = "<group>"; };
 		9630C90819FBC8CD00579953 /* MHColorTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MHColorTableCell.xib; path = "View/Table Cells/MHColorTableCell.xib"; sourceTree = "<group>"; };
-		9630C90A19FBDD2700579953 /* MHView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHView.h; sourceTree = "<group>"; };
-		9630C90B19FBDD5C00579953 /* MHViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHViewModel.h; sourceTree = "<group>"; };
 		9630C90C19FBDE0C00579953 /* MHNameTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHNameTableCell.h; path = "View/Table Cells/MHNameTableCell.h"; sourceTree = "<group>"; };
 		9630C90D19FBDE0C00579953 /* MHNameTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHNameTableCell.m; path = "View/Table Cells/MHNameTableCell.m"; sourceTree = "<group>"; };
 		9630C90F19FBDE4200579953 /* MHNameTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MHNameTableCell.xib; path = "View/Table Cells/MHNameTableCell.xib"; sourceTree = "<group>"; };
 		9630C91119FBEA6500579953 /* MHModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHModel.h; sourceTree = "<group>"; };
+		9680C88819FEA3E800DFE38A /* MHHexColorTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHHexColorTransformer.h; path = DataBinder/Transformers/MHHexColorTransformer.h; sourceTree = "<group>"; };
+		9680C88919FEA3E800DFE38A /* MHHexColorTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHHexColorTransformer.m; path = DataBinder/Transformers/MHHexColorTransformer.m; sourceTree = "<group>"; };
+		9680C8FB19FEBAEE00DFE38A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9680C8FD19FEBAF400DFE38A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9680C8FF19FEBAFE00DFE38A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9680C93119FEBCD500DFE38A /* BIND.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIND.h; sourceTree = "<group>"; };
+		9680C93219FEBCD500DFE38A /* BNDBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDBinder.h; sourceTree = "<group>"; };
+		9680C93319FEBCD500DFE38A /* BNDBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDBinding.h; sourceTree = "<group>"; };
+		9680C93419FEBCD500DFE38A /* libBIND.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBIND.a; sourceTree = "<group>"; };
+		9680C94119FECC7D00DFE38A /* BNDTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDTableViewCell.h; sourceTree = "<group>"; };
+		9680C94219FECC7D00DFE38A /* BNDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDView.h; sourceTree = "<group>"; };
+		9680C94319FECC7D00DFE38A /* BNDViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDViewModel.h; sourceTree = "<group>"; };
+		9680C94419FED80500DFE38A /* MHNameTableCell.bind */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MHNameTableCell.bind; path = DataBinder/MHNameTableCell.bind; sourceTree = "<group>"; };
+		C6C0BE419F67205B23D46391 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E019D9BCCE2D15B704A3A20D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9680C93519FEBCD500DFE38A /* libBIND.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +114,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2866EF8AED3AC1A2AB795066 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E019D9BCCE2D15B704A3A20D /* Pods.debug.xcconfig */,
+				C6C0BE419F67205B23D46391 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A04793814638B9858D44650 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9680C8FF19FEBAFE00DFE38A /* CoreGraphics.framework */,
+				9680C8FD19FEBAF400DFE38A /* Foundation.framework */,
+				9680C8FB19FEBAEE00DFE38A /* UIKit.framework */,
+				863689D0B9098B91C424CAA9 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9630C8A319FBAD8E00579953 = {
 			isa = PBXGroup;
 			children = (
 				9630C8AE19FBAD8E00579953 /* MVVM */,
 				9630C8C819FBAD8E00579953 /* MVVMTests */,
 				9630C8AD19FBAD8E00579953 /* Products */,
+				2866EF8AED3AC1A2AB795066 /* Pods */,
+				7A04793814638B9858D44650 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,13 +157,13 @@
 		9630C8AE19FBAD8E00579953 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				9680C92E19FEBCD500DFE38A /* External */,
+				9680C87419FD2B6D00DFE38A /* Binder */,
 				9630C8F219FBBC5700579953 /* Data */,
 				9630C8FB19FBC34100579953 /* Categories */,
 				9630C8F919FBBD2400579953 /* Networking */,
 				9630C91119FBEA6500579953 /* MHModel.h */,
-				9630C90B19FBDD5C00579953 /* MHViewModel.h */,
 				9630C8D519FBAE0300579953 /* MHDataController.h */,
-				9630C90A19FBDD2700579953 /* MHView.h */,
 				9630C8D819FBB58900579953 /* ViewModel */,
 				9630C8DD19FBB6CA00579953 /* Model */,
 				9630C8D619FBB55B00579953 /* Controller */,
@@ -248,8 +288,64 @@
 				9630C90C19FBDE0C00579953 /* MHNameTableCell.h */,
 				9630C90D19FBDE0C00579953 /* MHNameTableCell.m */,
 				9630C90F19FBDE4200579953 /* MHNameTableCell.xib */,
+				9680C94419FED80500DFE38A /* MHNameTableCell.bind */,
 			);
 			name = "Table Cells";
+			sourceTree = "<group>";
+		};
+		9680C87419FD2B6D00DFE38A /* Binder */ = {
+			isa = PBXGroup;
+			children = (
+				9680C88419FE5C1000DFE38A /* Transformers */,
+			);
+			name = Binder;
+			sourceTree = "<group>";
+		};
+		9680C88419FE5C1000DFE38A /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				9680C88819FEA3E800DFE38A /* MHHexColorTransformer.h */,
+				9680C88919FEA3E800DFE38A /* MHHexColorTransformer.m */,
+			);
+			name = Transformers;
+			sourceTree = "<group>";
+		};
+		9680C92E19FEBCD500DFE38A /* External */ = {
+			isa = PBXGroup;
+			children = (
+				9680C93619FEBCDC00DFE38A /* BIND */,
+			);
+			path = External;
+			sourceTree = SOURCE_ROOT;
+		};
+		9680C92F19FEBCD500DFE38A /* include */ = {
+			isa = PBXGroup;
+			children = (
+				9680C93019FEBCD500DFE38A /* BIND */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		9680C93019FEBCD500DFE38A /* BIND */ = {
+			isa = PBXGroup;
+			children = (
+				9680C94119FECC7D00DFE38A /* BNDTableViewCell.h */,
+				9680C94219FECC7D00DFE38A /* BNDView.h */,
+				9680C94319FECC7D00DFE38A /* BNDViewModel.h */,
+				9680C93119FEBCD500DFE38A /* BIND.h */,
+				9680C93219FEBCD500DFE38A /* BNDBinder.h */,
+				9680C93319FEBCD500DFE38A /* BNDBinding.h */,
+			);
+			path = BIND;
+			sourceTree = "<group>";
+		};
+		9680C93619FEBCDC00DFE38A /* BIND */ = {
+			isa = PBXGroup;
+			children = (
+				9680C92F19FEBCD500DFE38A /* include */,
+				9680C93419FEBCD500DFE38A /* libBIND.a */,
+			);
+			name = BIND;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +428,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9680C94519FED80500DFE38A /* MHNameTableCell.bind in Resources */,
 				9630C90919FBC8CD00579953 /* MHColorTableCell.xib in Resources */,
 				9630C8BB19FBAD8E00579953 /* Main.storyboard in Resources */,
 				9630C91019FBDE4200579953 /* MHNameTableCell.xib in Resources */,
@@ -363,6 +460,7 @@
 				9630C8F819FBBCA300579953 /* MHPersonFetcher.m in Sources */,
 				9630C8E919FBB8FE00579953 /* MHPerson.m in Sources */,
 				9630C8E019FBB76200579953 /* MHTableViewController.m in Sources */,
+				9680C88A19FEA3E800DFE38A /* MHHexColorTransformer.m in Sources */,
 				9630C8B219FBAD8E00579953 /* main.m in Sources */,
 				9630C90719FBC8A700579953 /* MHColorTableCell.m in Sources */,
 				9630C90E19FBDE0C00579953 /* MHNameTableCell.m in Sources */,
@@ -489,8 +587,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = MVVM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -499,8 +607,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = MVVM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -558,6 +676,7 @@
 				9630C8D119FBAD8E00579953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9630C8D219FBAD8E00579953 /* Build configuration list for PBXNativeTarget "MVVMTests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +685,7 @@
 				9630C8D419FBAD8E00579953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

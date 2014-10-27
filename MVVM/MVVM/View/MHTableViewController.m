@@ -8,8 +8,8 @@
 
 #import "MHTableViewController.h"
 #import "MHDataController.h"
-#import "MHViewModel.h"
-#import "MHView.h"
+#import "BNDViewModel.h"
+#import "BNDView.h"
 
 @interface MHTableViewController ()
 @property (nonatomic, copy) NSArray *viewModels;
@@ -42,16 +42,18 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    id <MHViewModel> viewModel = self.viewModels[indexPath.row];
+    id <BNDViewModel> viewModel = self.viewModels[indexPath.row];
     
     ///I am conveniently using the identifier here as a cell identifier. Someone else might choose
     ///to use the identifier only as way to identify different viewmodel instances,
     ///and present table view cells accordingly.
     NSString *identifier = viewModel.identifier;
-    UITableViewCell <MHView> *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    UITableViewCell <BNDView> *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[NSClassFromString(identifier) alloc] initWithStyle:UITableViewCellStyleDefault
-                                                    reuseIdentifier:identifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:identifier
+                                                     owner:self
+                                                   options:nil];
+        cell = [nib objectAtIndex:0];
     }
     [cell updateWithViewModel:viewModel];
     return cell;
@@ -60,8 +62,16 @@
 #pragma mark - Table view delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    id <MHTableViewModel> viewModel = self.viewModels[indexPath.row];
+    id <BNDTableViewModel> viewModel = self.viewModels[indexPath.row];
     return viewModel.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.textLabel.text = @"DUDE!!!";
+    cell.contentView.backgroundColor = [UIColor whiteColor];
 }
 
 @end

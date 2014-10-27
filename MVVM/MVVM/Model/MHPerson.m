@@ -24,4 +24,8 @@
     return self;
 }
 
+- (void)setHexColorCode:(NSString *)hexColorCode {
+    _hexColorCode = hexColorCode;
+}
+
 @end

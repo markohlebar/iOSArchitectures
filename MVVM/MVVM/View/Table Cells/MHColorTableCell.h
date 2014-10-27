@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MHView.h"
+#import "BNDTableViewCell.h"
 
 @protocol MHColorViewModel;
-@interface MHColorTableCell : UITableViewCell <MHView>
-- (void)updateWithViewModel:(id <MHColorViewModel> )viewModel;
-
+@interface MHColorTableCell : BNDTableViewCell
 @end

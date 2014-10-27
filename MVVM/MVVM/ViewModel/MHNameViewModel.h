@@ -9,10 +9,11 @@
 #ifndef MVVM_MHNameViewModel_h
 #define MVVM_MHNameViewModel_h
 
-#import "MHViewModel.h"
+#import "BNDViewModel.h"
 
-@protocol MHNameViewModel <MHTableViewModel>
-- (NSString *)name;
+@protocol MHNameViewModel <BNDViewModel>
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *hexColorCode;
 @end
 
 #endif

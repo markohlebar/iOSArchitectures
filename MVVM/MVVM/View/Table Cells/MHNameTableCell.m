@@ -10,9 +10,4 @@
 #import "MHNameViewModel.h"
 
 @implementation MHNameTableCell
-
-- (void)updateWithViewModel:(id <MHNameViewModel> )viewModel {
-    self.textLabel.text = viewModel.name;
-}
-
 @end

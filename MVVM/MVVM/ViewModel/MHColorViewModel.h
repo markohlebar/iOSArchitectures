@@ -9,10 +9,10 @@
 #ifndef MVVM_MHColorViewModel_h
 #define MVVM_MHColorViewModel_h
 
-#import "MHViewModel.h"
+#import "BNDViewModel.h"
 
-@protocol MHColorViewModel <MHViewModel>
-- (UIColor *)color;
+@protocol MHColorViewModel <BNDViewModel>
+@property (nonatomic, copy) UIColor *color;
 @end
 
 #endif

@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MHView.h"
+#import "BNDTableViewCell.h"
 
-@protocol MHNameViewModel;
-@interface MHNameTableCell : UITableViewCell <MHView>
-- (void)updateWithViewModel:(id <MHNameViewModel> )viewModel;
+@interface MHNameTableCell : BNDTableViewCell
 @end

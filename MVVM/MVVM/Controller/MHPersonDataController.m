@@ -13,7 +13,7 @@
 #import "MHPerson.h"
 #import "UIColor+Hex.h"
 
-@interface MHPersonViewModel : NSObject <MHViewModel>
+@interface MHPersonViewModel : NSObject <BNDViewModel>
 @property (nonatomic, strong, readonly) MHPerson *person;
 @end
 
@@ -39,9 +39,23 @@
 @end
 
 @interface MHPersonNameViewModel : MHPersonViewModel <MHNameViewModel>
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *hexColorCode;
 @end
 
 @implementation MHPersonNameViewModel
+
+- (void)setHexColorCode:(NSString *)hexColorCode {
+    self.person.hexColorCode = hexColorCode;
+}
+
+- (NSString *)hexColorCode {
+    return self.person.hexColorCode;
+}
+
+- (void)setName:(NSString *)name {
+    self.person.fullName = name;
+}
 
 - (NSString *)name {
     return self.person.fullName;
@@ -59,6 +73,7 @@
 @end
 
 @interface MHPersonColorViewModel : MHPersonViewModel <MHColorViewModel>
+@property (nonatomic, copy) UIColor *color;
 @end
 
 @implementation MHPersonColorViewModel

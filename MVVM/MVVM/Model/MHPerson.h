@@ -11,7 +11,7 @@
 
 @interface MHPerson : NSObject <MHModel>
 @property (nonatomic, copy, readonly) NSNumber *ID;
-@property (nonatomic, copy, readonly) NSString *fullName;
-@property (nonatomic, copy, readonly) NSString *hexColorCode;
+@property (nonatomic, copy) NSString *fullName;
+@property (nonatomic, copy) NSString *hexColorCode;
 
 @end
