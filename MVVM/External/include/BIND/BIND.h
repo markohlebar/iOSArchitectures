@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Marko Hlebar. All rights reserved.
 //
 
-#import "BNDBinder.h"
 #import "BNDBinding.h"
 #import "BNDTableViewCell.h"
 #import "BNDView.h"

@@ -7,12 +7,7 @@
 //
 
 #import "MHColorTableCell.h"
-#import "MHColorViewModel.h"
 
 @implementation MHColorTableCell
-
-- (void)updateWithViewModel:(id <MHColorViewModel> )viewModel {
-    self.contentView.backgroundColor = viewModel.color;
-}
 
 @end

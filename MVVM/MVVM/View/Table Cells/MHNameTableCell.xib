@@ -12,7 +12,15 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xTp-7z-a6X" id="vZh-Od-RxW">
                 <autoresizingMask key="autoresizingMask"/>
             </tableViewCellContentView>
+            <connections>
+                <outletCollection property="bindings" destination="9no-AE-lMX" id="SuO-ik-8bK"/>
+            </connections>
             <point key="canvasLocation" x="-387" y="-312"/>
         </tableViewCell>
+        <customObject id="9no-AE-lMX" customClass="BNDBinding">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="BIND" value="textLabel.text&lt;-name"/>
+            </userDefinedRuntimeAttributes>
+        </customObject>
     </objects>
 </document>

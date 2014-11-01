@@ -17,7 +17,7 @@
  *  in UITableViewDelegate's tableView:cellForRowAtIndexPath: method
  *  so that the bindings get updated.
  */
-@class BNDBinder;
+@class BNDBinding;
 @interface BNDTableViewCell : UITableViewCell <BNDView>
-@property (nonatomic, strong) IBOutlet BNDBinder *dataBinder;
+@property (nonatomic, strong) IBOutletCollection(BNDBinding) NSArray *bindings;
 @end

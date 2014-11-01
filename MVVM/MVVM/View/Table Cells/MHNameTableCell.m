@@ -7,7 +7,7 @@
 //
 
 #import "MHNameTableCell.h"
-#import "MHNameViewModel.h"
 
 @implementation MHNameTableCell
+
 @end

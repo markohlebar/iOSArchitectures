@@ -27,7 +27,6 @@
 		9630C91019FBDE4200579953 /* MHNameTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9630C90F19FBDE4200579953 /* MHNameTableCell.xib */; };
 		9680C88A19FEA3E800DFE38A /* MHHexColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9680C88919FEA3E800DFE38A /* MHHexColorTransformer.m */; };
 		9680C93519FEBCD500DFE38A /* libBIND.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9680C93419FEBCD500DFE38A /* libBIND.a */; };
-		9680C94519FED80500DFE38A /* MHNameTableCell.bind in Resources */ = {isa = PBXBuildFile; fileRef = 9680C94419FED80500DFE38A /* MHNameTableCell.bind */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,13 +83,11 @@
 		9680C8FD19FEBAF400DFE38A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9680C8FF19FEBAFE00DFE38A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9680C93119FEBCD500DFE38A /* BIND.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIND.h; sourceTree = "<group>"; };
-		9680C93219FEBCD500DFE38A /* BNDBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDBinder.h; sourceTree = "<group>"; };
 		9680C93319FEBCD500DFE38A /* BNDBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDBinding.h; sourceTree = "<group>"; };
 		9680C93419FEBCD500DFE38A /* libBIND.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBIND.a; sourceTree = "<group>"; };
 		9680C94119FECC7D00DFE38A /* BNDTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDTableViewCell.h; sourceTree = "<group>"; };
 		9680C94219FECC7D00DFE38A /* BNDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDView.h; sourceTree = "<group>"; };
 		9680C94319FECC7D00DFE38A /* BNDViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDViewModel.h; sourceTree = "<group>"; };
-		9680C94419FED80500DFE38A /* MHNameTableCell.bind */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MHNameTableCell.bind; path = DataBinder/MHNameTableCell.bind; sourceTree = "<group>"; };
 		C6C0BE419F67205B23D46391 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E019D9BCCE2D15B704A3A20D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -288,7 +285,6 @@
 				9630C90C19FBDE0C00579953 /* MHNameTableCell.h */,
 				9630C90D19FBDE0C00579953 /* MHNameTableCell.m */,
 				9630C90F19FBDE4200579953 /* MHNameTableCell.xib */,
-				9680C94419FED80500DFE38A /* MHNameTableCell.bind */,
 			);
 			name = "Table Cells";
 			sourceTree = "<group>";
@@ -333,7 +329,6 @@
 				9680C94219FECC7D00DFE38A /* BNDView.h */,
 				9680C94319FECC7D00DFE38A /* BNDViewModel.h */,
 				9680C93119FEBCD500DFE38A /* BIND.h */,
-				9680C93219FEBCD500DFE38A /* BNDBinder.h */,
 				9680C93319FEBCD500DFE38A /* BNDBinding.h */,
 			);
 			path = BIND;
@@ -428,7 +423,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9680C94519FED80500DFE38A /* MHNameTableCell.bind in Resources */,
 				9630C90919FBC8CD00579953 /* MHColorTableCell.xib in Resources */,
 				9630C8BB19FBAD8E00579953 /* Main.storyboard in Resources */,
 				9630C91019FBDE4200579953 /* MHNameTableCell.xib in Resources */,

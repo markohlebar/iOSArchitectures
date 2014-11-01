@@ -12,11 +12,14 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xuB-Y9-kQ6" id="vAL-GD-fhz">
                 <autoresizingMask key="autoresizingMask"/>
             </tableViewCellContentView>
+            <connections>
+                <outletCollection property="bindings" destination="RTW-SE-LkT" id="t3p-yK-rBQ"/>
+            </connections>
             <point key="canvasLocation" x="96" y="226"/>
         </tableViewCell>
-        <customObject id="sY0-l3-5hZ" customClass="BNDBinder">
+        <customObject id="RTW-SE-LkT" customClass="BNDBinding">
             <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="string" keyPath="BIND" value=""/>
+                <userDefinedRuntimeAttribute type="string" keyPath="BIND" value="contentView.backgroundColor &lt;- color"/>
             </userDefinedRuntimeAttributes>
         </customObject>
     </objects>
