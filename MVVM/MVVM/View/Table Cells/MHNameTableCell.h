@@ -10,4 +10,5 @@
 #import "BNDTableViewCell.h"
 
 @interface MHNameTableCell : BNDTableViewCell
+
 @end

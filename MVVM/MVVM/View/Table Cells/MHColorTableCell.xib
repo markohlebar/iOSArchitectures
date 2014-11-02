@@ -19,7 +19,7 @@
         </tableViewCell>
         <customObject id="RTW-SE-LkT" customClass="BNDBinding">
             <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="string" keyPath="BIND" value="contentView.backgroundColor &lt;- color"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="BIND" value="color -&gt; contentView.backgroundColor"/>
             </userDefinedRuntimeAttributes>
         </customObject>
     </objects>

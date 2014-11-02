@@ -95,6 +95,10 @@
 
 @implementation MHPersonDataController
 
+- (void)dealloc {
+    
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -104,8 +108,9 @@
 }
 
 - (void)reloadData:(MHViewModelBlock)dataBlock {
+    __weak typeof(self) weakSelf = self;
     [self.dataFetcher fetchPersonae:^(NSArray *personae) {
-        NSArray *viewModels = [self viewModelsForPersonae:personae];
+        NSArray *viewModels = [weakSelf viewModelsForPersonae:personae];
         dataBlock(viewModels, nil);
     }];
 }

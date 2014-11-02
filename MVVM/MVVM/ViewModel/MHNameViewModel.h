@@ -6,10 +6,9 @@
 //  Copyright (c) 2014 Marko Hlebar. All rights reserved.
 //
 
+#import "BIND.h"
 #ifndef MVVM_MHNameViewModel_h
 #define MVVM_MHNameViewModel_h
-
-#import "BNDViewModel.h"
 
 @protocol MHNameViewModel <BNDViewModel>
 @property (nonatomic, copy) NSString *name;

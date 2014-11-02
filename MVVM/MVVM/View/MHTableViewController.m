@@ -10,6 +10,7 @@
 #import "MHDataController.h"
 #import "BNDViewModel.h"
 #import "BNDView.h"
+#import "MHNameViewModel.h"
 
 @interface MHTableViewController ()
 @property (nonatomic, copy) NSArray *viewModels;
@@ -55,8 +56,11 @@
                                                    options:nil];
         cell = [nib objectAtIndex:0];
     }
-    [cell updateWithViewModel:viewModel];
+    cell.viewModel = viewModel;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell <BNDView>*)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 #pragma mark - Table view delegate
@@ -68,10 +72,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.textLabel.text = @"DUDE!!!";
-    cell.contentView.backgroundColor = [UIColor whiteColor];
+
+    id <MHNameViewModel> viewModel = self.viewModels[indexPath.row];
+    viewModel.name = @"DUDE!!!";
 }
 
 @end

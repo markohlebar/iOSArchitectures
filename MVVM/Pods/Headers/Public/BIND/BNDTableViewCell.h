@@ -1,0 +1,1 @@
+../../../BIND/BIND/Abstractions/BNDTableViewCell.h

@@ -7,6 +7,7 @@
 //
 
 #import "MHNameTableCell.h"
+#import "BNDBinding.h"
 
 @implementation MHNameTableCell
 

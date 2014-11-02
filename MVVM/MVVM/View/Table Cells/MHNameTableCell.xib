@@ -15,11 +15,11 @@
             <connections>
                 <outletCollection property="bindings" destination="9no-AE-lMX" id="SuO-ik-8bK"/>
             </connections>
-            <point key="canvasLocation" x="-387" y="-312"/>
+            <point key="canvasLocation" x="-659" y="-738"/>
         </tableViewCell>
         <customObject id="9no-AE-lMX" customClass="BNDBinding">
             <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="string" keyPath="BIND" value="textLabel.text&lt;-name"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="BIND" value="name-&gt;textLabel.text"/>
             </userDefinedRuntimeAttributes>
         </customObject>
     </objects>

@@ -7,6 +7,7 @@
 //
 
 #import "MHColorTableCell.h"
+#import "BNDBinding.h"
 
 @implementation MHColorTableCell
 
