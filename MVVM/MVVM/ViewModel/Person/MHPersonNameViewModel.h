@@ -11,4 +11,5 @@
 
 @interface MHPersonNameViewModel : MHPersonViewModel <MHNameViewModel>
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *ID;
 @end

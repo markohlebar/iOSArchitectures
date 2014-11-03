@@ -27,6 +27,10 @@
     return self.person.fullName;
 }
 
+- (NSString *)ID {
+    return [self.person.ID stringValue];
+}
+
 - (NSString *)identifier {
     static NSString *_nameIdentifier = @"MHNameTableCell";
     return _nameIdentifier;

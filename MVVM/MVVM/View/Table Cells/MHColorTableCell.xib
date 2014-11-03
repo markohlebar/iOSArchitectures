@@ -17,7 +17,7 @@
             </connections>
             <point key="canvasLocation" x="96" y="226"/>
         </tableViewCell>
-        <customObject id="RTW-SE-LkT" customClass="BNDBinding">
+        <customObject id="RTW-SE-LkT" userLabel="Color Binding" customClass="BNDBinding">
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="string" keyPath="BIND" value="color -&gt; contentView.backgroundColor"/>
             </userDefinedRuntimeAttributes>
