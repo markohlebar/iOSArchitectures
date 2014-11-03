@@ -29,7 +29,7 @@
     if (!_controllerNames) {
         _controllerNames = @[
                              @"Table View",
-                             @"Collection View"
+                             @"Section Table View"
                              ];
     }
     return _controllerNames;
@@ -59,7 +59,7 @@
             segueIdentifier = @"MHTableViewControllerSegue";
             break;
         case 1:
-            segueIdentifier = @"MHCollectionViewControllerSegue";
+            segueIdentifier = @"MHSectionTableViewControllerSegue";
             break;
         default:
             break;

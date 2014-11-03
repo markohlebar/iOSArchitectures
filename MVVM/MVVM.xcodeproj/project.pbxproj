@@ -19,14 +19,20 @@
 		9630C8E319FBB77F00579953 /* MHCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9630C8E219FBB77F00579953 /* MHCollectionViewController.m */; };
 		9630C8E619FBB7BF00579953 /* MHPersonDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9630C8E519FBB7BF00579953 /* MHPersonDataController.m */; };
 		9630C8E919FBB8FE00579953 /* MHPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9630C8E819FBB8FE00579953 /* MHPerson.m */; };
-		9630C8F419FBBC5700579953 /* MOCK_DATA.json in Resources */ = {isa = PBXBuildFile; fileRef = 9630C8F319FBBC5700579953 /* MOCK_DATA.json */; };
+		9630C8F419FBBC5700579953 /* persons.json in Resources */ = {isa = PBXBuildFile; fileRef = 9630C8F319FBBC5700579953 /* persons.json */; };
 		9630C8F819FBBCA300579953 /* MHPersonFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 9630C8F719FBBCA300579953 /* MHPersonFetcher.m */; };
 		9630C90119FBC3B900579953 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 9630C90019FBC3B900579953 /* UIColor+Hex.m */; };
 		9630C90719FBC8A700579953 /* MHColorTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9630C90619FBC8A700579953 /* MHColorTableCell.m */; };
 		9630C90919FBC8CD00579953 /* MHColorTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9630C90819FBC8CD00579953 /* MHColorTableCell.xib */; };
 		9630C90E19FBDE0C00579953 /* MHNameTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9630C90D19FBDE0C00579953 /* MHNameTableCell.m */; };
 		9630C91019FBDE4200579953 /* MHNameTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9630C90F19FBDE4200579953 /* MHNameTableCell.xib */; };
+		966063A61A066BFD000FEBA0 /* MHSectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966063A51A066BFD000FEBA0 /* MHSectionTableViewController.m */; };
 		9680C88A19FEA3E800DFE38A /* MHHexColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9680C88919FEA3E800DFE38A /* MHHexColorTransformer.m */; };
+		96A1C5441A065605006E0CE0 /* MHPersonSectionsDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1C5431A065605006E0CE0 /* MHPersonSectionsDataController.m */; };
+		96A1C5481A0656F5006E0CE0 /* MHPersonViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1C5471A0656F5006E0CE0 /* MHPersonViewModel.m */; };
+		96A1C54B1A06572B006E0CE0 /* MHPersonNameViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1C54A1A06572B006E0CE0 /* MHPersonNameViewModel.m */; };
+		96D01FD01A065783005EDEBB /* MHPersonColorViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D01FCF1A065783005EDEBB /* MHPersonColorViewModel.m */; };
+		96D01FD31A065836005EDEBB /* MHPersonSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D01FD21A065836005EDEBB /* MHPersonSectionViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +73,7 @@
 		9630C8E519FBB7BF00579953 /* MHPersonDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHPersonDataController.m; path = Controller/MHPersonDataController.m; sourceTree = "<group>"; };
 		9630C8E719FBB8FE00579953 /* MHPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHPerson.h; path = Model/MHPerson.h; sourceTree = "<group>"; };
 		9630C8E819FBB8FE00579953 /* MHPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHPerson.m; path = Model/MHPerson.m; sourceTree = "<group>"; };
-		9630C8F319FBBC5700579953 /* MOCK_DATA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MOCK_DATA.json; sourceTree = "<group>"; };
+		9630C8F319FBBC5700579953 /* persons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = persons.json; sourceTree = "<group>"; };
 		9630C8F619FBBCA300579953 /* MHPersonFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHPersonFetcher.h; path = Model/Parser/MHPersonFetcher.h; sourceTree = "<group>"; };
 		9630C8F719FBBCA300579953 /* MHPersonFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHPersonFetcher.m; path = Model/Parser/MHPersonFetcher.m; sourceTree = "<group>"; };
 		9630C8FF19FBC3B900579953 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "Categories/UIColor/UIColor+Hex.h"; sourceTree = "<group>"; };
@@ -79,11 +85,23 @@
 		9630C90D19FBDE0C00579953 /* MHNameTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHNameTableCell.m; path = "View/Table Cells/MHNameTableCell.m"; sourceTree = "<group>"; };
 		9630C90F19FBDE4200579953 /* MHNameTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MHNameTableCell.xib; path = "View/Table Cells/MHNameTableCell.xib"; sourceTree = "<group>"; };
 		9630C91119FBEA6500579953 /* MHModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHModel.h; sourceTree = "<group>"; };
+		966063A41A066BFD000FEBA0 /* MHSectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHSectionTableViewController.h; path = View/MHSectionTableViewController.h; sourceTree = "<group>"; };
+		966063A51A066BFD000FEBA0 /* MHSectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHSectionTableViewController.m; path = View/MHSectionTableViewController.m; sourceTree = "<group>"; };
 		9680C88819FEA3E800DFE38A /* MHHexColorTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHHexColorTransformer.h; path = DataBinder/Transformers/MHHexColorTransformer.h; sourceTree = "<group>"; };
 		9680C88919FEA3E800DFE38A /* MHHexColorTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHHexColorTransformer.m; path = DataBinder/Transformers/MHHexColorTransformer.m; sourceTree = "<group>"; };
 		9680C8FB19FEBAEE00DFE38A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9680C8FD19FEBAF400DFE38A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9680C8FF19FEBAFE00DFE38A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		96A1C5421A065605006E0CE0 /* MHPersonSectionsDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHPersonSectionsDataController.h; path = Controller/MHPersonSectionsDataController.h; sourceTree = "<group>"; };
+		96A1C5431A065605006E0CE0 /* MHPersonSectionsDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHPersonSectionsDataController.m; path = Controller/MHPersonSectionsDataController.m; sourceTree = "<group>"; };
+		96A1C5461A0656F5006E0CE0 /* MHPersonViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHPersonViewModel.h; path = ViewModel/Person/MHPersonViewModel.h; sourceTree = "<group>"; };
+		96A1C5471A0656F5006E0CE0 /* MHPersonViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHPersonViewModel.m; path = ViewModel/Person/MHPersonViewModel.m; sourceTree = "<group>"; };
+		96A1C5491A06572B006E0CE0 /* MHPersonNameViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHPersonNameViewModel.h; path = ViewModel/Person/MHPersonNameViewModel.h; sourceTree = "<group>"; };
+		96A1C54A1A06572B006E0CE0 /* MHPersonNameViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHPersonNameViewModel.m; path = ViewModel/Person/MHPersonNameViewModel.m; sourceTree = "<group>"; };
+		96D01FCE1A065783005EDEBB /* MHPersonColorViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHPersonColorViewModel.h; path = ViewModel/Person/MHPersonColorViewModel.h; sourceTree = "<group>"; };
+		96D01FCF1A065783005EDEBB /* MHPersonColorViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHPersonColorViewModel.m; path = ViewModel/Person/MHPersonColorViewModel.m; sourceTree = "<group>"; };
+		96D01FD11A065836005EDEBB /* MHPersonSectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHPersonSectionViewModel.h; path = ViewModel/Person/MHPersonSectionViewModel.h; sourceTree = "<group>"; };
+		96D01FD21A065836005EDEBB /* MHPersonSectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHPersonSectionViewModel.m; path = ViewModel/Person/MHPersonSectionViewModel.m; sourceTree = "<group>"; };
 		A6A8CD4797F0F95EEA27B81F /* libPods-MVVM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C0BE419F67205B23D46391 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E019D9BCCE2D15B704A3A20D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +224,8 @@
 			children = (
 				9630C8E419FBB7BF00579953 /* MHPersonDataController.h */,
 				9630C8E519FBB7BF00579953 /* MHPersonDataController.m */,
+				96A1C5421A065605006E0CE0 /* MHPersonSectionsDataController.h */,
+				96A1C5431A065605006E0CE0 /* MHPersonSectionsDataController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -213,6 +233,7 @@
 		9630C8D819FBB58900579953 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				96A1C5451A0656DA006E0CE0 /* Person */,
 				9630C8D919FBB62700579953 /* MHNameViewModel.h */,
 				9630C8DA19FBB64F00579953 /* MHColorViewModel.h */,
 			);
@@ -222,10 +243,12 @@
 		9630C8DC19FBB6B600579953 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9630C90419FBC85700579953 /* Table Cells */,
+				9630C90419FBC85700579953 /* Cells */,
 				9630C8B919FBAD8E00579953 /* Main.storyboard */,
 				9630C8DE19FBB76200579953 /* MHTableViewController.h */,
 				9630C8DF19FBB76200579953 /* MHTableViewController.m */,
+				966063A41A066BFD000FEBA0 /* MHSectionTableViewController.h */,
+				966063A51A066BFD000FEBA0 /* MHSectionTableViewController.m */,
 				9630C8E119FBB77F00579953 /* MHCollectionViewController.h */,
 				9630C8E219FBB77F00579953 /* MHCollectionViewController.m */,
 			);
@@ -244,7 +267,7 @@
 		9630C8F219FBBC5700579953 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				9630C8F319FBBC5700579953 /* MOCK_DATA.json */,
+				9630C8F319FBBC5700579953 /* persons.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -275,7 +298,7 @@
 			name = UIColor;
 			sourceTree = "<group>";
 		};
-		9630C90419FBC85700579953 /* Table Cells */ = {
+		9630C90419FBC85700579953 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				9630C90519FBC8A700579953 /* MHColorTableCell.h */,
@@ -285,7 +308,7 @@
 				9630C90D19FBDE0C00579953 /* MHNameTableCell.m */,
 				9630C90F19FBDE4200579953 /* MHNameTableCell.xib */,
 			);
-			name = "Table Cells";
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		9680C88419FE5C1000DFE38A /* Transformers */ = {
@@ -295,6 +318,21 @@
 				9680C88919FEA3E800DFE38A /* MHHexColorTransformer.m */,
 			);
 			name = Transformers;
+			sourceTree = "<group>";
+		};
+		96A1C5451A0656DA006E0CE0 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				96A1C5461A0656F5006E0CE0 /* MHPersonViewModel.h */,
+				96A1C5471A0656F5006E0CE0 /* MHPersonViewModel.m */,
+				96A1C5491A06572B006E0CE0 /* MHPersonNameViewModel.h */,
+				96A1C54A1A06572B006E0CE0 /* MHPersonNameViewModel.m */,
+				96D01FCE1A065783005EDEBB /* MHPersonColorViewModel.h */,
+				96D01FCF1A065783005EDEBB /* MHPersonColorViewModel.m */,
+				96D01FD11A065836005EDEBB /* MHPersonSectionViewModel.h */,
+				96D01FD21A065836005EDEBB /* MHPersonSectionViewModel.m */,
+			);
+			name = Person;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,7 +420,7 @@
 				9630C90919FBC8CD00579953 /* MHColorTableCell.xib in Resources */,
 				9630C8BB19FBAD8E00579953 /* Main.storyboard in Resources */,
 				9630C91019FBDE4200579953 /* MHNameTableCell.xib in Resources */,
-				9630C8F419FBBC5700579953 /* MOCK_DATA.json in Resources */,
+				9630C8F419FBBC5700579953 /* persons.json in Resources */,
 				9630C8C019FBAD8E00579953 /* LaunchScreen.xib in Resources */,
 				9630C8BD19FBAD8E00579953 /* Images.xcassets in Resources */,
 			);
@@ -435,17 +473,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A1C5481A0656F5006E0CE0 /* MHPersonViewModel.m in Sources */,
 				9630C8B819FBAD8E00579953 /* ViewController.m in Sources */,
 				9630C8B519FBAD8E00579953 /* AppDelegate.m in Sources */,
 				9630C8E319FBB77F00579953 /* MHCollectionViewController.m in Sources */,
 				9630C8E619FBB7BF00579953 /* MHPersonDataController.m in Sources */,
 				9630C90119FBC3B900579953 /* UIColor+Hex.m in Sources */,
 				9630C8F819FBBCA300579953 /* MHPersonFetcher.m in Sources */,
+				96D01FD31A065836005EDEBB /* MHPersonSectionViewModel.m in Sources */,
 				9630C8E919FBB8FE00579953 /* MHPerson.m in Sources */,
 				9630C8E019FBB76200579953 /* MHTableViewController.m in Sources */,
+				966063A61A066BFD000FEBA0 /* MHSectionTableViewController.m in Sources */,
 				9680C88A19FEA3E800DFE38A /* MHHexColorTransformer.m in Sources */,
+				96D01FD01A065783005EDEBB /* MHPersonColorViewModel.m in Sources */,
 				9630C8B219FBAD8E00579953 /* main.m in Sources */,
 				9630C90719FBC8A700579953 /* MHColorTableCell.m in Sources */,
+				96A1C5441A065605006E0CE0 /* MHPersonSectionsDataController.m in Sources */,
+				96A1C54B1A06572B006E0CE0 /* MHPersonNameViewModel.m in Sources */,
 				9630C90E19FBDE0C00579953 /* MHNameTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,16 +616,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MVVM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/External",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -593,16 +631,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MVVM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/External",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -23,7 +23,7 @@
 
 - (void)fetchPersonae:(MHPersonaeBlock)personaeBlock {
     NSBlockOperation *blockOperation = [NSBlockOperation blockOperationWithBlock:^{
-        NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"MOCK_DATA" ofType:@"json"];
+        NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"persons" ofType:@"json"];
         NSData *jsonData = [NSData dataWithContentsOfFile:jsonPath];
         NSArray *dictionaries = [NSJSONSerialization JSONObjectWithData:jsonData
                                                                 options:0

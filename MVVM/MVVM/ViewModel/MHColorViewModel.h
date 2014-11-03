@@ -11,6 +11,7 @@
 
 #import "BNDViewModel.h"
 
+@class UIColor;
 @protocol MHColorViewModel <BNDViewModel>
 @property (nonatomic, copy) UIColor *color;
 @end

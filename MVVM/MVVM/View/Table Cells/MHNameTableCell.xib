@@ -13,11 +13,11 @@
                 <autoresizingMask key="autoresizingMask"/>
             </tableViewCellContentView>
             <connections>
-                <outletCollection property="bindings" destination="9no-AE-lMX" id="SuO-ik-8bK"/>
+                <outletCollection property="bindings" destination="NOi-eL-S8L" id="jxd-b6-6Cc"/>
             </connections>
-            <point key="canvasLocation" x="-659" y="-738"/>
+            <point key="canvasLocation" x="-844" y="-855"/>
         </tableViewCell>
-        <customObject id="9no-AE-lMX" customClass="BNDBinding">
+        <customObject id="NOi-eL-S8L" customClass="BNDBinding">
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="string" keyPath="BIND" value="name-&gt;textLabel.text"/>
             </userDefinedRuntimeAttributes>

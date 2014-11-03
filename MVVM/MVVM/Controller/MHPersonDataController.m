@@ -8,96 +8,11 @@
 
 #import "MHPersonDataController.h"
 #import "MHPersonFetcher.h"
-#import "MHNameViewModel.h"
-#import "MHColorViewModel.h"
 #import "MHPerson.h"
-#import "UIColor+Hex.h"
-
-@interface MHPersonViewModel : NSObject <BNDViewModel>
-@property (nonatomic, strong, readonly) MHPerson *person;
-@end
-
-@implementation MHPersonViewModel
-
-+ (instancetype)viewModelWithModel:(MHPerson *)person {
-    return [[self alloc] initWithModel:person];
-}
-
-- (instancetype)initWithModel:(MHPerson *)person {
-    self = [super init];
-    if (self) {
-        _person = person;
-    }
-    return self;
-}
-
-- (NSString *)identifier {
-    NSAssert(NO, @"Implement in concrete subclass");
-    return nil;
-}
-
-@end
-
-@interface MHPersonNameViewModel : MHPersonViewModel <MHNameViewModel>
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *hexColorCode;
-@end
-
-@implementation MHPersonNameViewModel
-
-- (void)setHexColorCode:(NSString *)hexColorCode {
-    self.person.hexColorCode = hexColorCode;
-}
-
-- (NSString *)hexColorCode {
-    return self.person.hexColorCode;
-}
-
-- (void)setName:(NSString *)name {
-    self.person.fullName = name;
-}
-
-- (NSString *)name {
-    return self.person.fullName;
-}
-
-- (NSString *)identifier {
-    static NSString *_nameIdentifier = @"MHNameTableCell";
-    return _nameIdentifier;
-}
-
-- (CGFloat)cellHeight {
-    return 44;
-}
-
-@end
-
-@interface MHPersonColorViewModel : MHPersonViewModel <MHColorViewModel>
-@property (nonatomic, copy) UIColor *color;
-@end
-
-@implementation MHPersonColorViewModel
-
-- (UIColor *)color {
-    return [UIColor colorFromHexString:self.person.hexColorCode];
-}
-
-- (NSString *)identifier {
-    static NSString *_colorIdentifier = @"MHColorTableCell";
-    return _colorIdentifier;
-}
-
-- (CGFloat)cellHeight {
-    return 80;
-}
-
-@end
+#import "MHPersonNameViewModel.h"
+#import "MHPersonColorViewModel.h"
 
 @implementation MHPersonDataController
-
-- (void)dealloc {
-    
-}
 
 - (instancetype)init {
     self = [super init];

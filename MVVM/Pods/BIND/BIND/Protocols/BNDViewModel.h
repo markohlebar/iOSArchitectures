@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 @protocol BNDViewModel <NSObject>
 
@@ -37,6 +38,15 @@
 @required
 
 - (CGFloat)cellHeight;
+
+@end
+
+@protocol BNDTableSectionViewModel <BNDTableViewModel>
+
+@required
+
+@property (nonatomic, strong) NSArray *rowViewModels;
+@property (nonatomic, copy) NSString *title;
 
 @end
 

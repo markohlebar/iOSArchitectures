@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "MHDataController.h"
+#import "MHNameViewModel.h"
+#import "MHColorViewModel.h"
 
+@class MHPerson;
 @class MHPersonFetcher;
 @interface MHPersonDataController : NSObject <MHTableViewDataController>
 @property (nonatomic, strong) MHPersonFetcher *dataFetcher;
 @end
+
