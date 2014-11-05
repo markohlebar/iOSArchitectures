@@ -13,7 +13,8 @@ I would love to hear about that as well.
 
 ## MVVM Example ##
 
-Actually this might be considered [MVVMC | http://skimp-blog.blogspot.ie/2012/02/mvvm-is-dead-long-live-mvvmc.html] example. It is using [BIND | https://github.com/markohlebar/BIND] framework for bindings and some MVVM abstractions. 
+Actually this might be considered [MVVMC](http://skimp-blog.blogspot.ie/2012/02/mvvm-is-dead-long-live-mvvmc.html)
+example. It is using [BIND](https://github.com/markohlebar/BIND) framework for bindings and some MVVM abstractions. 
 
 ### Bilding ###
 
