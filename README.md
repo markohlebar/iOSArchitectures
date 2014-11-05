@@ -10,3 +10,11 @@ or improving on my own.
 
 Also, if there are any errors in my approach to a certain pattern, 
 I would love to hear about that as well. 
+
+## MVVM Example ##
+
+Actually this might be considered [MVVMC | http://skimp-blog.blogspot.ie/2012/02/mvvm-is-dead-long-live-mvvmc.html] example. It is using [BIND | https://github.com/markohlebar/BIND] framework for bindings and some MVVM abstractions. 
+
+### Bilding ###
+
+To build the MVVM example you should open the `MVVM.workspace` inside the MVVM project and compile. 
