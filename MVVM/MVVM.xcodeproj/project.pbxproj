@@ -62,7 +62,6 @@
 		9630C8C519FBAD8E00579953 /* MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9630C8CA19FBAD8E00579953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9630C8CB19FBAD8E00579953 /* MVVMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMTests.m; sourceTree = "<group>"; };
-		9630C8D519FBAE0300579953 /* MHDataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHDataController.h; sourceTree = "<group>"; };
 		9630C8D919FBB62700579953 /* MHNameViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MHNameViewModel.h; path = ViewModel/MHNameViewModel.h; sourceTree = "<group>"; };
 		9630C8DA19FBB64F00579953 /* MHColorViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MHColorViewModel.h; path = ViewModel/MHColorViewModel.h; sourceTree = "<group>"; };
 		9630C8DE19FBB76200579953 /* MHTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHTableViewController.h; path = View/MHTableViewController.h; sourceTree = "<group>"; };
@@ -177,7 +176,6 @@
 				9630C8FB19FBC34100579953 /* Categories */,
 				9630C8F919FBBD2400579953 /* Networking */,
 				9630C91119FBEA6500579953 /* MHModel.h */,
-				9630C8D519FBAE0300579953 /* MHDataController.h */,
 				9630C8D819FBB58900579953 /* ViewModel */,
 				9630C8DD19FBB6CA00579953 /* Model */,
 				9630C8D619FBB55B00579953 /* Controller */,

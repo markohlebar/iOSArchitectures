@@ -22,11 +22,12 @@
     return self;
 }
 
-- (void)reloadData:(MHViewModelBlock)dataBlock {
+- (void)updateWithContext:(id)context
+        viewModelsHandler:(BNDViewModelsBlock)viewModelsHandler {
     __weak typeof(self) weakSelf = self;
     [self.dataFetcher fetchPersonae:^(NSArray *personae) {
         NSArray *viewModels = [weakSelf viewModelsForPersonae:personae];
-        dataBlock(viewModels, nil);
+        viewModelsHandler(viewModels, nil);
     }];
 }
 

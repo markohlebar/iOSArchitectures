@@ -7,7 +7,6 @@
 //
 
 #import "MHTableViewController.h"
-#import "MHDataController.h"
 #import "BNDViewModel.h"
 #import "BNDView.h"
 #import "MHNameViewModel.h"
@@ -17,7 +16,7 @@
 @end
 
 @implementation MHTableViewController {
-    NSObject <MHTableViewDataController> *_dataController;
+    NSObject <BNDDataController> *_dataController;
 }
 @synthesize dataController = _dataController;
 
@@ -25,7 +24,7 @@
     [super viewDidLoad];
     
     __weak typeof(self) weakSelf = self;
-    [_dataController reloadData:^(NSArray *viewModels, NSError *error) {
+    [_dataController updateWithContext:nil viewModelsHandler:^(NSArray *viewModels, NSError *error) {
         weakSelf.viewModels = viewModels;
         [weakSelf.tableView reloadData];
     }];

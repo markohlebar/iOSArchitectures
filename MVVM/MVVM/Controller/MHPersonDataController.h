@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MHDataController.h"
 #import "MHNameViewModel.h"
 #import "MHColorViewModel.h"
+#import <BIND/BNDDataController.h>
 
 @class MHPerson;
 @class MHPersonFetcher;
-@interface MHPersonDataController : NSObject <MHTableViewDataController>
+@interface MHPersonDataController : NSObject <BNDDataController>
 @property (nonatomic, strong) MHPersonFetcher *dataFetcher;
 @end
 
