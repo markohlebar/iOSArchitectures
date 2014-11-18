@@ -12,7 +12,7 @@
 }
 
 + (instancetype)viewModelWithModel:(id)model {
-    return [[MHPersonSectionViewModel alloc] initWithModel:model];
+    return [[self alloc] initWithModel:model];
 }
 
 - (instancetype)initWithModel:(id)model {
