@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BNDTableViewCell.h"
+#import <BIND/BNDConcreteView.h>
 
 @interface MHNameTableCell : BNDTableViewCell
 

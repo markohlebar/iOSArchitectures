@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Marko Hlebar. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "BNDView.h"
+#import "BNDMacros.h"
 
 @class BNDBinding;
 
@@ -15,23 +15,12 @@
  *  BNDTableViewCell is concrete table view cell subclass that loads bindings
  *  from a XIB and then refreshes the bindings when the 
  *  cell gets updated. 
+ *  It also synthesizes your viewModel property.
  *  The user of this cell should call setViewModel:
  *  in UITableViewDelegate's tableView:cellForRowAtIndexPath: method
  *  so that the bindings get updated.
  */
-@interface BNDTableViewCell : UITableViewCell <BNDView>
-@property (nonatomic, strong) IBOutletCollection(BNDBinding) NSArray *bindings;
-@end
-
-/**
- *  BNDCollectionViewCell is a concrete collection view cell subclass that loads bindings
- *  from a XIB and then refreshes the bindings when the
- *  cell gets updated.
- *  The user of this cell should call setViewModel:
- *  in UITableViewDelegate's tableView:cellForRowAtIndexPath: method
- *  so that the bindings get updated.
- */
-@interface BNDCollectionViewCell : UICollectionViewCell <BNDView>
+@interface BNDTableViewCell : _BNDTableViewCell <BNDView>
 @property (nonatomic, strong) IBOutletCollection(BNDBinding) NSArray *bindings;
 @end
 
@@ -39,11 +28,11 @@
  *  BNDView is an concrete view subclass that loads bindings
  *  from a XIB and then refreshes the bindings when the
  *  cell gets updated.
- *  The user of this cell should call setViewModel:
- *  in UITableViewDelegate's tableView:cellForRowAtIndexPath: method
+ *  It also synthesizes your viewModel property.
+ *  The user of this view should call setViewModel:
  *  so that the bindings get updated.
  */
-@interface BNDView : UIView <BNDView>
+@interface BNDView : _BNDView <BNDView>
 @property (nonatomic, strong) IBOutletCollection(BNDBinding) NSArray *bindings;
 @end
 
@@ -51,10 +40,31 @@
  *  BNDViewController is a concrete view controller subclass that loads bindings
  *  from a XIB and then refreshes the bindings when the
  *  cell gets updated.
- *  The user of this cell should call setViewModel:
- *  in UITableViewDelegate's tableView:cellForRowAtIndexPath: method
+ *  It also synthesizes your viewModel property.
+ *  The user of this view controller should call setViewModel:
  *  so that the bindings get updated.
  */
-@interface BNDViewController : UIViewController <BNDView>
+@interface BNDViewController : _BNDViewController <BNDViewController>
+@property (nonatomic, strong) IBOutletCollection(BNDBinding) NSArray *bindings;
+@property (nonatomic, strong) IBOutlet id <BNDDataController> dataController;
+@end
+
+
+#pragma mark - Platform Specific
+
+#if TARGET_OS_IPHONE
+
+/**
+ *  BNDCollectionViewCell is a concrete collection view cell subclass that loads bindings
+ *  from a XIB and then refreshes the bindings when the
+ *  cell gets updated.
+ *  It also synthesizes your viewModel property.
+ *  The user of this cell should call setViewModel:
+ *  in UICollectionViewDelegate's collectionView:cellForItemAtIndexPath: method
+ *  so that the bindings get updated.
+ */
+@interface BNDCollectionViewCell : UICollectionViewCell <BNDView>
 @property (nonatomic, strong) IBOutletCollection(BNDBinding) NSArray *bindings;
 @end
+
+#endif

@@ -13,11 +13,21 @@
 @implementation __CLASS_NAME__ \
 @synthesize viewModel = _viewModel; \
 - (void)setViewModel:(id <BNDViewModel> )viewModel { \
-    _viewModel = viewModel; \
     for (BNDBinding *binding in self.bindings) { \
-        [binding bindLeft:_viewModel withRight:self]; \
+        if ([self isShorthandBinding:binding]) { \
+            [binding bindLeft:viewModel withRight:self]; \
+        } \
+        else { \
+            [binding bindLeft:self withRight:self]; \
+        } \
     } \
+    [self willChangeValueForKey:@"viewModel"]; \
+    _viewModel = viewModel; \
+    [self didChangeValueForKey:@"viewModel"]; \
     [self viewDidUpdateViewModel:viewModel]; \
+} \
+- (BOOL)isShorthandBinding:(BNDBinding *)binding { \
+    return [binding.BIND rangeOfString:@"viewModel"].location == NSNotFound; \
 } \
 - (void)viewDidUpdateViewModel:(id <BNDViewModel> )viewModel { \
 } \
@@ -25,8 +35,14 @@
 
 BND_VIEW_IMPLEMENTATION(BNDTableViewCell)
 
-BND_VIEW_IMPLEMENTATION(BNDCollectionViewCell)
-
 BND_VIEW_IMPLEMENTATION(BNDView)
 
 BND_VIEW_IMPLEMENTATION(BNDViewController)
+
+#pragma mark - Platform Specific
+
+#if TARGET_OS_IPHONE
+
+BND_VIEW_IMPLEMENTATION(BNDCollectionViewCell)
+
+#endif

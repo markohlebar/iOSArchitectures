@@ -65,7 +65,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     id <BNDTableSectionViewModel> sectionViewModel = self.viewModels[indexPath.section];
-    id <BNDTableViewModel> viewModel = sectionViewModel.rowViewModels[indexPath.row];
+    id <BNDTableRowViewModel> viewModel = sectionViewModel.rowViewModels[indexPath.row];
     return viewModel.cellHeight;
 }
 

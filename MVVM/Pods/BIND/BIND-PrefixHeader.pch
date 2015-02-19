@@ -1,8 +1,3 @@
-#ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#endif
-
-#import "Pods-MVVM-environment.h"
 //
 //  BIND-PrefixHeader.pch
 //  BIND

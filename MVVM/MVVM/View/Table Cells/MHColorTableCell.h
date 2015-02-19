@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BNDTableViewCell.h"
+#import "BNDConcreteView.h"
 
 @protocol MHColorViewModel;
 @interface MHColorTableCell : BNDTableViewCell

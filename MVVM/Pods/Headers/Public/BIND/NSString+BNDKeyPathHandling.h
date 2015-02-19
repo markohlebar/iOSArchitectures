@@ -1,0 +1,1 @@
+../../../BIND/BIND/Categories/NSString+BNDKeyPathHandling.h

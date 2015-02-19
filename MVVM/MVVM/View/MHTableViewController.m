@@ -62,7 +62,7 @@
 #pragma mark - Table view delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    id <BNDTableViewModel> viewModel = self.viewModels[indexPath.row];
+    id <BNDTableRowViewModel> viewModel = self.viewModels[indexPath.row];
     return viewModel.cellHeight;
 }
 
@@ -70,7 +70,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     id <MHNameViewModel> viewModel = self.viewModels[indexPath.row];
-    viewModel.name = @"DUDE!!!";
+    if ([viewModel respondsToSelector:@selector(setName:)]) {
+        viewModel.name = @"DUDE!!!";
+    }
 }
 
 @end
